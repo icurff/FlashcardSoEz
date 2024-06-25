@@ -1,1 +1,2 @@
 # FlashcardSoEz
+JavaFX app 
