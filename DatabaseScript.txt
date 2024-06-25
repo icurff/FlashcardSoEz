@@ -1,0 +1,76 @@
+DROP DATABASE IF EXISTS flashcardsoez;
+CREATE DATABASE flashcardsoez;
+USE flashcardsoez; 
+
+create table User (
+id int auto_increment  primary key,
+firstName varchar(100) ,
+lastName varchar(100),
+avtPath varchar(200),
+username varchar(100) NOT NULL,
+password varchar(100) NOT NULL,
+email varchar(100) NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+
+)auto_increment =100;
+
+create table Deck(
+id int auto_increment  primary key,
+creator_id int,
+title varchar(100) NOT NULL,
+thumbnailPath varchar(200),
+updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
+foreign key (creator_id) references User(id)
+);
+
+create table Card(
+id int auto_increment  primary key,
+deck_id int,
+question text NOT NULL,
+answer text NOT NULL,
+foreign key (deck_id) references Deck(id)
+);
+
+create table Course(
+id int auto_increment  primary key,
+creator_id int,
+title varchar(100) NOT NULL,
+foreign key (creator_id) references User(id)
+);
+
+create table CourseMember(
+ course_id INT,
+    student_id INT,
+    PRIMARY KEY (course_id, student_id),
+    FOREIGN KEY (course_id) REFERENCES Course(id),
+    FOREIGN KEY (student_id) REFERENCES User(id)
+);
+
+create table Test(
+id int auto_increment  primary key,
+ course_id INT,
+    deck_id INT,
+    title varchar(100),
+    FOREIGN KEY (course_id) REFERENCES Course(id),
+    FOREIGN KEY (deck_id) REFERENCES Deck(id)
+)auto_increment =100;
+
+create table TestScore(
+id int auto_increment  primary key,
+ test_id INT,
+    student_id INT,
+    score double default 0,
+    finished_At TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (test_id) REFERENCES Test(id),
+    FOREIGN KEY (student_id) REFERENCES User(id)
+)auto_increment =1000;
+   
+create table Otp(
+id int auto_increment  primary key,
+code char(6),
+user_id int,
+expiryTime timestamp,
+FOREIGN KEY (user_id) REFERENCES User(id)
+
+)
+
