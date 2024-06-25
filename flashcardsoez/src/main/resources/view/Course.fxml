@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.CourseController">
+   <children>
+      <Label fx:id="courseName" text="Course Title" />
+      <Label fx:id="courseTeacher" text="Creator" />
+   </children>
+   <styleClass>
+      <String fx:value="algn-center" />
+      <String fx:value="white-bg" />
+      <String fx:value="bold" />
+      <String fx:value="nav" />
+   </styleClass>
+</VBox>

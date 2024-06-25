@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1200.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.GamesController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="white-bg" HBox.hgrow="ALWAYS" />
+      <BorderPane prefHeight="600.0" prefWidth="749.0" styleClass="white-bg">
+         <top>
+            <HBox prefHeight="278.0" prefWidth="750.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="291.0" prefWidth="250.0" spacing="10.0" styleClass="nav">
+                     <children>
+                        <Rectangle fx:id="thumbnail1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="180.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
+                        <ComboBox fx:id="deckBox1" prefWidth="150.0" />
+                        <Button mnemonicParsing="false" onAction="#playChoiceGame" text="Play" />
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="white-bg" HBox.hgrow="ALWAYS" />
+   </children>
+</HBox>

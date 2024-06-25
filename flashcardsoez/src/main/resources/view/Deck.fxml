@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.DeckController">
+   <children>
+      <Rectangle fx:id="deckImg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label fx:id="deckTitle" prefHeight="47.0" prefWidth="250.0" text="deckTitle" />
+      <Label fx:id="cardCount" prefHeight="33.0" prefWidth="250.0" text="cardCount" />
+   </children>
+   <styleClass>
+      <String fx:value="white-bg" />
+      <String fx:value="bold" />
+      <String fx:value="nav" />
+   </styleClass>
+</VBox>

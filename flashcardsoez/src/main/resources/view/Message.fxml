@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox fx:id="container" alignment="CENTER_RIGHT" minHeight="60.0" prefWidth="800.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.MessageController">
+    <children>
+        <TextFlow fx:id="textFlow" prefHeight="60.0" styleClass="algn-center" textAlignment="CENTER">
+         <children>
+            <Label fx:id="messContent" maxWidth="750.0" minHeight="60.0" text="szdfgadfgasdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdf" wrapText="true">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding></Label>
+         </children>
+         <HBox.margin>
+            <Insets right="20.0" />
+         </HBox.margin></TextFlow>
+    </children>
+</HBox>

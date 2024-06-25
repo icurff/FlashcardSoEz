@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="editStackPane" prefHeight="600.0" prefWidth="1200.0" styleClass="white-bg" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.EditController">
+         <children>
+            <VBox fx:id="courseVBox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="304.0" prefWidth="1200.0">
+                     <content>
+                        <TableView fx:id="courseTable" onMouseClicked="#loadStudentDetail" prefHeight="297.0" prefWidth="942.0" />
+                     </content>
+                  </ScrollPane>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Course" />
+                                    <ComboBox fx:id="courseBox" onAction="#loadCourseName" prefWidth="150.0" />
+                                    <Label text="Course Name " />
+                                    <TextField fx:id="courseNameField" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Student Id" />
+                                    <TextField fx:id="studentIdField" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="56.0" />
+                                    <Label text="Student Name" />
+                                    <TextField editable="false" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="1200.0" spacing="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#updateCourseName" text="Update Course Name" />
+                        <Button mnemonicParsing="false" onAction="#removeStudentFromCourse" text="Remove Student" />
+                              <Button mnemonicParsing="false" onAction="#deleteCourse" text="Delete Course" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDeck" text="Edit Deck" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+      <VBox fx:id="deckVBox" prefHeight="200.0" prefWidth="100.0" visible="false">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="304.0" prefWidth="1200.0">
+               <content>
+                  <TableView fx:id="deckTable" onMouseClicked="#loadCardDetail" prefHeight="298.0" prefWidth="986.0" />
+               </content>
+            </ScrollPane>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Deck" />
+                              <ComboBox fx:id="deckBox" onAction="#loadDeckName" prefWidth="150.0" />
+                              <Label text="Deck Name " />
+                              <TextField fx:id="deckNameField" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Card id" />
+                              <TextField fx:id="cardIdField" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="47.0" />
+                              <Label text="Front " />
+                              <TextField fx:id="cardFrontField" />
+                              <Label text="Back" />
+                              <TextField fx:id="cardBackField" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="1200.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#updateCard" text="Update Card" />
+                        <Button mnemonicParsing="false" onAction="#removeCardFromDeck" text="Delete Card" />
+                        <Button mnemonicParsing="false" onAction="#updateDeckName" text="Update Deck Name" />
+                        <Button mnemonicParsing="false" onAction="#deleteDeck" text="Delete Deck" />
+                        <Button mnemonicParsing="false" onAction="#handleCourse" text="Edit Course" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+         </children>
+      </StackPane>

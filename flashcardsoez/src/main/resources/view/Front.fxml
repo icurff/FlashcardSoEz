@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.FrontController">
+   <right>
+      <StackPane fx:id="frontStackPane" prefHeight="600.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="signinPane" prefHeight="600.0" prefWidth="300.0" styleClass="light-blue-bg">
+               <children>
+                  <VBox layoutX="30.0" layoutY="30.0" prefHeight="440.0" prefWidth="240.0" spacing="5.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="240.0" styleClass="bold" text="Sign In" textAlignment="CENTER" />
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Username" />
+                        <TextField fx:id="keySig" prefHeight="40.0" prefWidth="240.0" promptText="Enter your username or email" styleClass="bg-radius-50" />
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Password" />
+                        <PasswordField fx:id="passwordSig" prefHeight="40.0" prefWidth="240.0" promptText="Enter your password" styleClass="bg-radius-50" />
+                        <GridPane prefHeight="40.0" prefWidth="240.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label onMouseClicked="#handleResetPane" prefHeight="40.0" prefWidth="120.0" styleClass="link" text="Forget Password?" />
+                              <Button fx:id="sigButton" mnemonicParsing="false" onAction="#handleSignin" prefHeight="40.0" prefWidth="120.0" text="Sign in" GridPane.columnIndex="1">
+                                 <styleClass>
+                                    <String fx:value="yellow-bg" />
+                                    <String fx:value="bg-radius-50" />
+                                 </styleClass></Button>
+                           </children>
+                        </GridPane>
+                        <Button mnemonicParsing="false" onAction="#handleRegisterPane" prefHeight="40.0" prefWidth="240.0" text="Don't have an account? Register">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="pad-50" />
+                              <String fx:value="yellow-bg" />
+                              <String fx:value="bg-radius-50" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="registerPane" prefHeight="600.0" prefWidth="300.0" styleClass="light-blue-bg" visible="false">
+               <children>
+                  <VBox layoutX="30.0" layoutY="30.0" prefHeight="440.0" prefWidth="240.0" spacing="5.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="240.0" styleClass="bold" text="Register" textAlignment="CENTER" />
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Username" />
+                        <TextField fx:id="usernameReg" prefHeight="40.0" prefWidth="240.0" promptText="Enter your username" styleClass="bg-radius-50" />
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Email" />
+                        <TextField fx:id="emailReg" prefHeight="40.0" prefWidth="240.0" promptText="Enter your email" styleClass="bg-radius-50" />
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Password" />
+                        <PasswordField fx:id="passwordReg" prefHeight="40.0" prefWidth="240.0" promptText="Enter your password" styleClass="bg-radius-50" />
+                        <GridPane prefHeight="40.0" prefWidth="240.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label onMouseClicked="#handleSigninPane" prefHeight="40.0" prefWidth="120.0" styleClass="link" text="Back to sign in" />
+                              <Button mnemonicParsing="false" onAction="#handleRegister" prefHeight="40.0" prefWidth="120.0" text="Register" GridPane.columnIndex="1">
+                                 <styleClass>
+                                    <String fx:value="yellow-bg" />
+                                    <String fx:value="bg-radius-50" />
+                                 </styleClass></Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="resetPane" prefHeight="600.0" prefWidth="300.0" styleClass="light-blue-bg" visible="false">
+               <children>
+                  <VBox layoutX="30.0" layoutY="30.0" prefHeight="440.0" prefWidth="240.0" spacing="5.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="240.0" styleClass="bold" text="Reset your password" textAlignment="CENTER" />
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Email" />
+                        <TextField fx:id="resetEmail" prefHeight="40.0" prefWidth="240.0" promptText="Enter your email address" />
+                        <GridPane hgap="20.0" prefHeight="40.0" prefWidth="240.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#sendOtpToEmail" prefHeight="40.0" prefWidth="110.0" styleClass="yellow-bg" text="Send OTP" GridPane.columnIndex="1" />
+                              <TextField fx:id="resetOtp" prefHeight="40.0" prefWidth="110.0" promptText="Enter OTP" />
+                           </children>
+                        </GridPane>
+                        <Label prefHeight="40.0" prefWidth="240.0" text="Password" />
+                        <PasswordField fx:id="resetPassword" prefHeight="40.0" prefWidth="240.0" promptText="Enter your new password" />
+                        <Button mnemonicParsing="false" onAction="#resetPassword" prefHeight="40.0" prefWidth="240.0" text="Submit" />
+                        <Label onMouseClicked="#handleSigninPane" prefHeight="40.0" prefWidth="240.0" styleClass="link" text="Back to sign in" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </right>
+   <center>
+      <Pane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <styleClass>
+            <String fx:value="bg" />
+            <String fx:value="light-blue-bg" />
+         </styleClass></Pane>
+   </center>
+</BorderPane>

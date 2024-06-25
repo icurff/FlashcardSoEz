@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1200.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.flashcardsoez.controller.ChoiceGameController">
+   <children>
+      <Pane prefHeight="0.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+      <BorderPane prefHeight="550.0" prefWidth="1200.0">
+         <center>
+            <HBox prefHeight="500.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="500.0" prefWidth="700.0">
+                     <children>
+                        <TextFlow prefHeight="200.0" prefWidth="480.0">
+                           <children>
+                              <Label fx:id="questionField" prefHeight="200.0" prefWidth="480.0" styleClass="white-lb" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." textAlignment="JUSTIFY" wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="choiceVBox" alignment="CENTER" fillWidth="false" prefHeight="500.0" prefWidth="500.0" spacing="50.0">
+                     <children>
+                        <TextFlow prefHeight="50.0" prefWidth="320.0">
+                           <children>
+                              <Label fx:id="choice1" onMouseClicked="#onChoiceSelected" prefHeight="50.0" prefWidth="320.0" styleClass="white-lb" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="30.0" top="10.0" />
+                           </VBox.margin>
+                        </TextFlow>
+                        <TextFlow prefHeight="50.0" prefWidth="320.0">
+                           <children>
+                              <Label fx:id="choice2" onMouseClicked="#onChoiceSelected" prefHeight="50.0" prefWidth="320.0" styleClass="white-lb" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="30.0" />
+                           </VBox.margin>
+                        </TextFlow>
+                        <TextFlow prefHeight="50.0" prefWidth="320.0">
+                           <children>
+                              <Label fx:id="choice3" onMouseClicked="#onChoiceSelected" prefHeight="50.0" prefWidth="320.0" styleClass="white-lb" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="30.0" />
+                           </VBox.margin>
+                        </TextFlow>
+                        <TextFlow prefHeight="50.0" prefWidth="320.0">
+                           <children>
+                              <Label fx:id="choice4" onMouseClicked="#onChoiceSelected" prefHeight="50.0" prefWidth="320.0" styleClass="white-lb" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="30.0" />
+                           </VBox.margin>
+                        </TextFlow>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="50.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <styleClass>
+            <String fx:value="choice-bg" />
+            <String fx:value="dark-blue-bg" />
+         </styleClass>
+         <top>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="scoreLabel" prefHeight="50.0" prefWidth="80.0" styleClass="white-lb" text="Score: " />
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+      <Pane prefHeight="0.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+   </children>
+</HBox>
